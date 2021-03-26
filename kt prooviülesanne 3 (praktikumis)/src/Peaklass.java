@@ -61,8 +61,8 @@ public class Peaklass {
         // Selleks tuleb kasutada Collections.shuffle meetodit. Antud meetod võtab argumendiks listi ning järjestab selle suvalises
         // järjekorras. Toitude list järjestada iga tellimuse jaoks uuesti ümber ning lisada tellimusse 3 esimest toitu.
         for (Tellimus i : tellimused) {
+            Collections.shuffle(toidud);
             for (int j = 0; j < 3; j++) {
-                Collections.shuffle(toidud);
                 i.lisaToit(toidud.get(j));
             }
         }
